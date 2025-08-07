@@ -2,7 +2,7 @@
   "name": "btc-tax-calculator-github-pages",
   "version": "1.2.0",
   "private": true,
-  "homepage": "https://tvoj-username.github.io/btc-tax-calculator-github-pages",
+  "homepage": "https://remeniki.github.io/btc-tax-calculator-pro",
   "scripts": {
     "start": "vite",
     "build": "vite build",
