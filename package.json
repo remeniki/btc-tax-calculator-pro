@@ -1,6 +1,6 @@
 {
   "name": "btc-tax-calculator-pro",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "private": true,
   "homepage": "https://remeniki.github.io/btc-tax-calculator-pro",
   "scripts": {
@@ -18,7 +18,7 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^5.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.0",
     "gh-pages": "^6.0.0",
     "postcss": "^8.4.0",

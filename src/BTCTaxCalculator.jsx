@@ -40,7 +40,7 @@ export default function BTCTaxCalculator() {
     const doc = new jsPDF();
     doc.setFont("helvetica", "normal");
     doc.setFontSize(16);
-    doc.text("Kalkulačka dane z predaja BTC", 10, 20);
+    doc.text("Kalkulačka dane z predaja BTC", 10, 20, { encoding: "UTF-8" });
     doc.setFontSize(12);
     autoTable(doc, {
       startY: 30,
@@ -77,8 +77,8 @@ export default function BTCTaxCalculator() {
   };
 
   return (
-    <div className="max-w-xl mx-auto space-y-6 bg-white p-6 rounded-xl shadow-lg">
-      <h1 className="text-3xl font-bold text-center">Kalkulačka dane z predaja BTC</h1>
+    <div className="space-y-6 bg-white p-4 sm:p-6 rounded-xl shadow-lg">
+      <h1 className="text-2xl sm:text-3xl font-bold text-center">Kalkulačka dane z predaja BTC</h1>
       <div className="space-y-4">
         <div>
           <label className="block font-semibold">Rok zdaňovania</label>
@@ -119,13 +119,13 @@ export default function BTCTaxCalculator() {
           <p><strong>Daň z príjmu:</strong> {format(incomeTax)} €</p>
           <p><strong>Zdravotné odvody:</strong> {format(healthInsurance)} €</p>
           <p><strong>Spolu daň + odvody:</strong> {format(totalTax)} €</p>
-          <p className="text-xl font-semibold text-green-700"><strong>Čistý zisk po zdanení:</strong> {format(netIncome)} €</p>
+          <p className="text-lg sm:text-xl font-semibold text-green-700"><strong>Čistý zisk po zdanení:</strong> {format(netIncome)} €</p>
         </div>
-        <div className="flex flex-col gap-2 pt-4">
-          <button onClick={exportToPDF} className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+        <div className="flex flex-col sm:flex-row gap-2 pt-4">
+          <button onClick={exportToPDF} className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
             Exportovať do PDF
           </button>
-          <button onClick={exportToExcel} className="bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">
+          <button onClick={exportToExcel} className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">
             Exportovať do Excelu
           </button>
         </div>
